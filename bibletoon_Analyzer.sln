@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bibletoon_Analyzer", "bibletoon_Analyzer\bibletoon_Analyzer\bibletoon_Analyzer.csproj", "{DD09D09E-C330-46D8-AF39-B7A62B2E46ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bibletoon_Analyzer.CodeFixes", "bibletoon_Analyzer\bibletoon_Analyzer.CodeFixes\bibletoon_Analyzer.CodeFixes.csproj", "{1F4E30F9-E99B-4D04-9B57-2A2BFA7F4BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bibletoon_Analyzer.Package", "bibletoon_Analyzer\bibletoon_Analyzer.Package\bibletoon_Analyzer.Package.csproj", "{EFBC056A-7A13-408A-8837-94A92C7B3626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bibletoon_Analyzer.Test", "bibletoon_Analyzer\bibletoon_Analyzer.Test\bibletoon_Analyzer.Test.csproj", "{8B0947EC-C295-46E2-BE40-5B66C602E067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bibletoon_Analyzer.Vsix", "bibletoon_Analyzer\bibletoon_Analyzer.Vsix\bibletoon_Analyzer.Vsix.csproj", "{D4145A80-5C01-4B29-8B0F-90ACD04EB74A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD09D09E-C330-46D8-AF39-B7A62B2E46ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD09D09E-C330-46D8-AF39-B7A62B2E46ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD09D09E-C330-46D8-AF39-B7A62B2E46ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD09D09E-C330-46D8-AF39-B7A62B2E46ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4E30F9-E99B-4D04-9B57-2A2BFA7F4BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4E30F9-E99B-4D04-9B57-2A2BFA7F4BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4E30F9-E99B-4D04-9B57-2A2BFA7F4BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4E30F9-E99B-4D04-9B57-2A2BFA7F4BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFBC056A-7A13-408A-8837-94A92C7B3626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFBC056A-7A13-408A-8837-94A92C7B3626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFBC056A-7A13-408A-8837-94A92C7B3626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFBC056A-7A13-408A-8837-94A92C7B3626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0947EC-C295-46E2-BE40-5B66C602E067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0947EC-C295-46E2-BE40-5B66C602E067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0947EC-C295-46E2-BE40-5B66C602E067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0947EC-C295-46E2-BE40-5B66C602E067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4145A80-5C01-4B29-8B0F-90ACD04EB74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4145A80-5C01-4B29-8B0F-90ACD04EB74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4145A80-5C01-4B29-8B0F-90ACD04EB74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4145A80-5C01-4B29-8B0F-90ACD04EB74A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06D6C0E1-33BB-4AE8-954D-51EA3D476DD0}
+	EndGlobalSection
+EndGlobal
