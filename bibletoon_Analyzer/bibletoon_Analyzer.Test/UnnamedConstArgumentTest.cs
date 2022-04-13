@@ -38,15 +38,15 @@ namespace ConsoleApplication1
         public void Xd(long argA, int argB, int argC) {}
 
         public void Zd() {
-            int arg = 2000;
-            Xd(1000, arg, argC: 3000);
+            Func<int, int> aboba = (a) => { return a + 2; };
+            aboba.Invoke(12);
         }
        
     }
 }";
 
             var expected = new DiagnosticResult(UnnamedConstArgumentAnalyzer.Id, DiagnosticSeverity.Warning)
-                .WithLocation(17, 16);
+                .WithLocation(17, 26);
 
             await VerifyCS.VerifyAnalyzerAsync(test, expected);
         }
@@ -66,7 +66,7 @@ namespace ConsoleApplication1
 {
     class Aboba
     {   
-        public void Xd(int argA, int argB, int argC) {}
+        public void Xd(long argA, int argB, int argC) {}
 
         public void Zd() {
             int arg = 2000;
@@ -88,7 +88,7 @@ namespace ConsoleApplication1
 {
     class Aboba
     {   
-        public void Xd(int argA, int argB, int argC) {}
+        public void Xd(long argA, int argB, int argC) {}
 
         public void Zd() {
             int arg = 2000;

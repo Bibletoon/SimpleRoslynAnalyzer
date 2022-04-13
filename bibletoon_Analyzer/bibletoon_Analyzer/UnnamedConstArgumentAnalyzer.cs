@@ -1,12 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
-using System.Threading;
 using Microsoft.CodeAnalysis.Operations;
 
 namespace bibletoon_Analyzer
@@ -14,7 +9,7 @@ namespace bibletoon_Analyzer
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class UnnamedConstArgumentAnalyzer : DiagnosticAnalyzer
     {
-        public static string Id => "BA001";
+        public const string Id = "BA001";
         private static string Title => "Unnamed constant argument";
         private static string Description => "Constant argument should be named";
         private const string Category = "Naming";
