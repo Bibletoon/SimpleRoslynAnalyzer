@@ -29,7 +29,7 @@ namespace bibletoon_Analyzer
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var identifier = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<IdentifierNameSyntax>().First();
             var symbol = ModelExtensions.GetSymbolInfo(context.Document.GetSemanticModelAsync().Result, identifier).Symbol;
-            var type = symbol is ILocalSymbol ? ((ILocalSymbol)symbol).Type : ((IFieldSymbol)symbol).Type;
+            var type = symbol is ILocalSymbol ? ((ILocalSymbol)symbol).Type : symbol is IPropertySymbol ? ((IPropertySymbol)symbol).Type : ((IFieldSymbol)symbol).Type;
             var isFromSource = type.DeclaringSyntaxReferences.Length > 0;
             if (!isFromSource)
                 return;
@@ -44,7 +44,8 @@ namespace bibletoon_Analyzer
 
         private async Task<Solution> OverrideToStringMethodAsync(Document contextDocument, ISymbol symbol, CancellationToken cancellationToken)
         {
-            var type = symbol is ILocalSymbol ? ((ILocalSymbol)symbol).Type : ((IFieldSymbol)symbol).Type;
+            var type = symbol is ILocalSymbol ? ((ILocalSymbol)symbol).Type : symbol is IPropertySymbol ? ((IPropertySymbol)symbol).Type : ((IFieldSymbol)symbol).Type;
+
             var classDeclaration = await type.DeclaringSyntaxReferences.First()
                                                                .GetSyntaxAsync(cancellationToken) as ClassDeclarationSyntax;
 
