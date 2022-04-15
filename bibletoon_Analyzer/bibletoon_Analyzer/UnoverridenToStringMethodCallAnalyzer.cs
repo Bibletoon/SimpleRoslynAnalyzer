@@ -34,7 +34,8 @@ namespace bibletoon_Analyzer
             {
                 var model = context.Compilation.GetSemanticModel(invocationOperation.Syntax.SyntaxTree);
                 var symbol = model.GetSymbolInfo(invocationOperation.Children.First().Syntax).Symbol;
-                var diagnostic = Diagnostic.Create(Rule, invocationOperation.Syntax.GetLocation(), ((ILocalSymbol)symbol).Type.Name);
+                var type = symbol is ILocalSymbol ? ((ILocalSymbol)symbol).Type : ((IFieldSymbol)symbol).Type;
+                var diagnostic = Diagnostic.Create(Rule, invocationOperation.Syntax.GetLocation(), type.Name);
                 context.ReportDiagnostic(diagnostic);
             }
         }
